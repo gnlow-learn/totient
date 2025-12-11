@@ -6,8 +6,8 @@ const primes = [
 
 const factors =
 (n: number) => {
-    if (Math.sqrt(n) > primes.at(-1)!) {
-        throw ""
+    if (n > primes.at(-1)!) {
+        throw "input too large"
     }
     return primes.filter(x => n % x == 0)
 }
